@@ -1,0 +1,2 @@
+C:\Users\phill\Documents\Visual Studio 2015\Projects\NETCatalog\NETCatalog\NETCatalog.Windows\NETCatalog.Windows.csproj;neutral
+C:\Users\phill\Documents\Visual Studio 2015\Projects\NETCatalog\NETCatalog\NETCatalog\NETCatalog.csproj;neutral
