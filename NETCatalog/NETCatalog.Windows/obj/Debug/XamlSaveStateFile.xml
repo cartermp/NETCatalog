@@ -1,7 +1,5 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\phill\documents\visual studio 2015\projects\netcatalog\netcatalog\netcatalog.windows\obj\debug\intermediatexaml\netcatalog.windows.exe" HashGuid="e240ae75-0b58-9ce8-f1e3-11b6f9fff1c6" />
-    <ReferenceAssembly PathName="c:\users\phill\documents\visual studio 2015\projects\netcatalog\netcatalog\netcatalog\bin\debug\netcatalog.dll" HashGuid="ff716926-9af0-53a9-9371-4b54cb5fd862" />
     <ReferenceAssembly PathName="c:\users\phill\documents\visual studio 2015\projects\netcatalog\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.core.dll" HashGuid="c8a30eb8-5ae8-352d-b94f-7c913a7557ba" />
     <ReferenceAssembly PathName="c:\users\phill\documents\visual studio 2015\projects\netcatalog\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.platform.dll" HashGuid="d9389e38-8a39-bed5-406b-7a34fe4704ea" />
     <ReferenceAssembly PathName="c:\users\phill\documents\visual studio 2015\projects\netcatalog\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="dbd728c2-e21b-4125-2be0-f7931b605baa" />
