@@ -11,6 +11,7 @@ namespace NETCatalog
 {
     public partial class CategoriesPage : ContentPage
     {
+        // I feel dirty for hard-coding this but it was honestly the best solution at the time.
         private readonly Dictionary<string, Dictionary<string, string>> _categoryToConcepts = new Dictionary<string, Dictionary<string, string>>
         {
             {
@@ -141,33 +142,15 @@ namespace NETCatalog
 
             for (int i = 0; i < concepts.Count; i++)
             {
-                var image = new Image
-                {
-                    Aspect = Aspect.AspectFit,
-                    Source = ImageSource.FromResource($"NETCatalog.{category}.{_categoryToConcepts[category][concepts[i]]}.png"),
-                };
-
-                var imageTapRecognizer = new TapGestureRecognizer();
-                imageTapRecognizer.Tapped += Image_Tapped;
-
-                var label = new Label
-                {
-                    Text = concepts[i],
-                    HorizontalOptions = LayoutOptions.Start
-                };
-
-                var labelTapRecognizer = new TapGestureRecognizer();
-                labelTapRecognizer.Tapped += Label_Tapped;
+                var conceptName = _categoryToConcepts[category][concepts[i]];
+                var image = BuildImage(category, conceptName);
+                var label = BuildLabel(category, conceptName);
 
                 var sl = new StackLayout
                 {
                     Spacing = 0,
                     VerticalOptions = LayoutOptions.FillAndExpand,
-                    Children =
-                    {
-                        image,
-                        label
-                    }
+                    Children = { image, label }
                 };
 
                 CategoriesGrid.Children.Add(sl, firstColumn ? 0 : 1, row);
@@ -181,16 +164,35 @@ namespace NETCatalog
             }
         }
 
-        public async void Image_Tapped(object sender, EventArgs e)
+        private Label BuildLabel(string category, string conceptName)
         {
-            // figure this out
+            var label = new Label
+            {
+                Text = conceptName,
+                HorizontalOptions = LayoutOptions.Center,
+                FontSize = 25
+            };
+
+            var labelTapRecognizer = new TapGestureRecognizer();
+            labelTapRecognizer.Tapped += async (s, e) => await Navigation.PushAsync(new ConceptPage(category, conceptName));
+
+            label.GestureRecognizers.Add(labelTapRecognizer);
+            return label;
         }
 
-        public async void Label_Tapped(object sender, EventArgs e)
+        private Image BuildImage(string category, string conceptName)
         {
-            var b = (Label)sender;
-            var concept = _categoryToConcepts.Values.First(lookup => lookup.ContainsKey(b.Text))[b.Text];
-            await Navigation.PushAsync(new ConceptPage(_currentCategory, concept));
+            var image = new Image
+            {
+                Aspect = Aspect.AspectFit,
+                Source = ImageSource.FromResource($"NETCatalog.{category}.{conceptName}.png"),
+            };
+
+            var imageTapRecognizer = new TapGestureRecognizer();
+            imageTapRecognizer.Tapped += async (s, e) => await Navigation.PushAsync(new ConceptPage(category, conceptName));
+
+            image.GestureRecognizers.Add(imageTapRecognizer);
+            return image;
         }
     }
 }
