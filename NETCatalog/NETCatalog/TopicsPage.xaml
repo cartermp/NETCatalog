@@ -20,24 +20,6 @@
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
-      <Button Text = ".NET Platform" Grid.Row="0" Grid.Column="0"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
-      <Button Text = ".NET Core" Grid.Row="0" Grid.Column="1"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
-      <Button Text = ".NET Framework" Grid.Row="1" Grid.Column="0"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked" />
-      <Button Text = "ASP.NET Core" Grid.Row="1" Grid.Column="1"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
-      <Button Text = "Xamarin" Grid.Row="2" Grid.Column="0"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
-      <Button Text = "Universal Windows Platform" Grid.Row="2" Grid.Column="1"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
-      <Button Text = "Visual Studio" Grid.Row="3" Grid.Column="0"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
-      <Button Text = "C# and VB" Grid.Row="3" Grid.Column="0"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
-      <Button Text = "F#" Grid.Row="3" Grid.Column="1"
-  Style="{StaticResource darkerButton}" Clicked="Item_Clicked"/>
     </Grid>
   </ContentPage.Content>
 </ContentPage>
