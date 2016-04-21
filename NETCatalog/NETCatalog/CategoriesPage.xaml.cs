@@ -127,24 +127,24 @@ namespace NETCatalog
              }
         };
 
-        private readonly string _currentCategory;
-
-        public CategoriesPage(string category)
+        public CategoriesPage(string category, string categoryTitle)
         {
             InitializeComponent();
 
-            _currentCategory = category;
+            Title = categoryTitle;
 
-            var concepts = _categoryToConcepts[category].Keys.ToList();
+            var concepts = _categoryToConcepts[category].Keys.ToArray();
 
             bool firstColumn = true;
             int row = 0;
 
-            for (int i = 0; i < concepts.Count; i++)
+            for (int i = 0; i < concepts.Length; i++)
             {
-                var conceptName = _categoryToConcepts[category][concepts[i]];
-                var image = BuildImage(category, conceptName);
-                var label = BuildLabel(category, conceptName);
+                var fileName = _categoryToConcepts[category][concepts[i]];
+                var textualConceptName = concepts[i];
+
+                var image = BuildImage(category, fileName, textualConceptName);
+                var label = BuildLabel(category, fileName, textualConceptName);
 
                 var sl = new StackLayout
                 {
@@ -164,32 +164,34 @@ namespace NETCatalog
             }
         }
 
-        private Label BuildLabel(string category, string conceptName)
+        private Label BuildLabel(string category, string conceptName, string niceConceptName)
         {
             var label = new Label
             {
-                Text = conceptName,
+                Text = niceConceptName,
                 HorizontalOptions = LayoutOptions.Center,
-                FontSize = 25
+                FontSize = 15
             };
 
             var labelTapRecognizer = new TapGestureRecognizer();
-            labelTapRecognizer.Tapped += async (s, e) => await Navigation.PushAsync(new ConceptPage(category, conceptName));
+            labelTapRecognizer.Tapped += async (s, e) => 
+                await Navigation.PushAsync(new ConceptPage(category, conceptName, niceConceptName));
 
             label.GestureRecognizers.Add(labelTapRecognizer);
             return label;
         }
 
-        private Image BuildImage(string category, string conceptName)
+        private Image BuildImage(string category, string fileName, string niceConceptName)
         {
             var image = new Image
             {
                 Aspect = Aspect.AspectFit,
-                Source = ImageSource.FromResource($"NETCatalog.{category}.{conceptName}.png"),
+                Source = ImageSource.FromResource($"NETCatalog.{category}.{fileName}.png"),
             };
 
             var imageTapRecognizer = new TapGestureRecognizer();
-            imageTapRecognizer.Tapped += async (s, e) => await Navigation.PushAsync(new ConceptPage(category, conceptName));
+            imageTapRecognizer.Tapped += async (s, e) => 
+                await Navigation.PushAsync(new ConceptPage(category, conceptName: fileName, niceConceptName: niceConceptName));
 
             image.GestureRecognizers.Add(imageTapRecognizer);
             return image;

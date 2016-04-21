@@ -15,12 +15,14 @@ namespace NETCatalog
         private readonly HttpClient _client = new HttpClient();
         private readonly string _baseUrl = "http://dotnet-buildtwentysixteendemo.azurewebsites.net/topics";
 
-        public ConceptPage(string category, string concept)
+        public ConceptPage(string category, string conceptName, string niceConceptName)
         {
             InitializeComponent();
 
+            Title = niceConceptName;
+
             // It's okay not to await this here rather than blocking the UI thread.
-            GetMarkdownAndDisplayIt(category, concept);
+            GetMarkdownAndDisplayIt(category, conceptName);
         }
 
         private async Task GetMarkdownAndDisplayIt(string category, string concept)

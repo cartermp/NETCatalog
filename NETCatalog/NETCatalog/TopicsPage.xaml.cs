@@ -11,6 +11,7 @@ namespace NETCatalog
         public TopicsPage()
         {
             InitializeComponent();
+
             _categoryLookup = new Dictionary<string, string>
             {
                 { ".NET Platform", "platform" },
@@ -23,13 +24,15 @@ namespace NETCatalog
                 { "C# and VB", "csharpvb" },
                 { "F#", "fsharp" },
             };
+
+            Title = ".NET Catalog";
         }
 
         public async void Item_Clicked(object sender, EventArgs e)
         {
             var b = (Button)sender;
             var category = _categoryLookup[b.Text];
-            await Navigation.PushAsync(new CategoriesPage(category));
+            await Navigation.PushAsync(new CategoriesPage(category, b.Text));
         }
     }
 }
