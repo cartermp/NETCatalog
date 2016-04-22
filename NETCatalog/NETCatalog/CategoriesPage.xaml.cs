@@ -146,8 +146,9 @@ namespace NETCatalog
 
                 var sl = new StackLayout
                 {
+                    Padding = new Thickness(20, 5, 5, 5),
                     Spacing = 10,
-                    Orientation = StackOrientation.Vertical,
+                    Orientation = StackOrientation.Horizontal,
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                     Children = { image, label }
                 };
@@ -161,8 +162,8 @@ namespace NETCatalog
             var label = new Label
             {
                 Text = niceConceptName,
-                HorizontalOptions = LayoutOptions.Center,
-                FontSize = 15
+                VerticalOptions = LayoutOptions.Center,
+                FontSize = 20
             };
 
             var labelTapRecognizer = new TapGestureRecognizer();
