@@ -134,8 +134,6 @@ namespace NETCatalog
             Title = categoryTitle;
 
             var concepts = _categoryToConcepts[category].Keys.ToArray();
-
-            bool firstColumn = true;
             int row = 0;
 
             for (int i = 0; i < concepts.Length; i++)
@@ -148,19 +146,13 @@ namespace NETCatalog
 
                 var sl = new StackLayout
                 {
-                    Spacing = 0,
-                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    Spacing = 10,
+                    Orientation = StackOrientation.Vertical,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
                     Children = { image, label }
                 };
 
-                CategoriesGrid.Children.Add(sl, firstColumn ? 0 : 1, row);
-
-                firstColumn = !firstColumn;
-
-                if (i % 2 != 0)
-                {
-                    row++;
-                }
+                CategoriesGrid.Children.Add(sl, 0, row++);
             }
         }
 
