@@ -20,8 +20,7 @@ namespace NETCatalog
                 Tuple.Create("uwp", "Universal Windows Platform"),
                 Tuple.Create("vs", "Visual Studio"),
                 Tuple.Create("xamarin", "Xamarin"),
-                Tuple.Create("csharpvb", "C# and VB"),
-                Tuple.Create("fsharp", "F#")
+                Tuple.Create("csharpvbfsharp", "C#, VB and F#")
             };
 
             Title = ".NET Catalog";

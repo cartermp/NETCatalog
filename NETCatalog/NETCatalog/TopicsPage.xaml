@@ -2,24 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NETCatalog.TopicsPage">
-  <ContentPage.Resources>
-    <ResourceDictionary>
-      <Style x:Key="darkerButton" TargetType="Button">
-        <Setter Property="BackgroundColor" Value="#ddd"/>
-        <Setter Property="TextColor" Value="Black" />
-        <Setter Property="BorderRadius" Value="0"/>
-        <Setter Property="FontSize" Value="40" />
-      </Style>
-    </ResourceDictionary>
-  </ContentPage.Resources>
   <ContentPage.Content>
-    <Grid x:Name="TopicsGrid">
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-      </Grid.RowDefinitions>
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
-    </Grid>
+    <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+      <Grid x:Name="TopicsGrid">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+      </Grid>
+    </ScrollView>
   </ContentPage.Content>
 </ContentPage>

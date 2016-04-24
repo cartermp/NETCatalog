@@ -26,9 +26,9 @@ namespace NETCatalog
                     { "Generics",  "generics" },
                     { "Lambdas",  "lambdas" },
                     { "LINQ",  "linq" },
-                    { ".NET Standard",  "netstandard" },  // needs image!
+                    { ".NET Standard",  "netstandard" },
                     { "NuGet",  "nuget" },
-                    { "Open Standards",  "open-standards" }, // need image!
+                    { "Open Standards",  "open-standards" },
                     { "P/Invoke",  "p-invoke" },
                     { "Portable Class Libraries",  "portable-class-libraries" },
                     { "Reflection",  "reflection" },
@@ -40,23 +40,21 @@ namespace NETCatalog
                  "netcore",
                  new Dictionary<string, string>
                  {
-                     { "Cross Platform", "cross-platform" }, // needs image!
-                     { "Modular", "modular" }, // needs image!
+                     { "Cross Platform", "cross-platform" },
+                     { "Modular", "modular" },
                      { "Multicore JIT", "multi-core-jit" },
-                     { ".NET Core", "netcore" }, // needs image!
-                     { "Open Source", "open-source" }, // needs image!
+                     { "Open Source", "open-source" },
                      { "RyuJIT", "ryujit" },
-                     { "Side by Side Installations", "side-by-side" } // needs image!
+                     { "Side by Side Installations", "side-by-side" }
                  }
              },
              {
                  "netfx",
                  new Dictionary<string, string>
                  {
-                     { "ASP.NET Web Forms", "asp-net-webforms" }, // needs image!
+                     { "ASP.NET Web Forms", "aspnet-webforms" },
                      { "ClickOnce Deployment", "click-once" },
                      { "Multicore JIT", "multi-core-jit" },
-                     { ".NET Framework", "netfx" }, // needs image!
                      { "NGEN", "ngen" },
                      { "RyuJIT", "ryujit" },
                      { "WCF", "wcf" },
@@ -68,12 +66,11 @@ namespace NETCatalog
                  "aspnetcore",
                  new Dictionary<string, string>
                  {
-                     { "ASP.NET Core", "aspnetcore" }, // needs image!
-                     { "Cross Platform", "cross-platform" }, // needs image!
-                     { "Microservices", "microservices" }, // needs image!
-                     { "Modular", "modular" }, // needs image!
-                     { "Open Source", "open-source" }, // needs image!
-                     { "Performance", "performance" } // needs image!
+                     { "Cross Platform", "cross-platform" },
+                     { "Microservices", "microservices" },
+                     { "Modular", "modular" },
+                     { "Open Source", "open-source" },
+                     { "Performance", "performance" }
                  }
              },
              {
@@ -81,10 +78,9 @@ namespace NETCatalog
                  new Dictionary<string, string>
                  {
                      { ".NET Native", "net-native" },
-                     { "Universal Windows Platform", "uwp" }, // needs image!
-                     { "Windows 10 Family of Devices", "win10-family" }, // needs image!
-                     { "Windows Store", "windows-store" }, // needs image!
-                     { "WinRT", "winrt" } // needs image!
+                     { "Windows 10 Family of Devices", "win10-family" },
+                     { "Windows Store", "windows-store" },
+                     { "WinRT", "winrt" }
                  }
              },
              {
@@ -93,9 +89,8 @@ namespace NETCatalog
                  {
                      { "Activity Tracing", "activity-tracing" },
                      { "Async Debugging", "async-debugging" },
-                     { "Awesome", "awesome" }, // needs image!
-                     { "C# REPL", "csharp-repl" }, // needs image!
-                     { "Data Oriented Breakpoints", "data-oriented-breakpoints" }, // needs image!
+                     { "C# REPL", "csharp-repl" },
+                     { "Data Oriented Breakpoints", "data-oriented-breakpoints" },
                      { "Edit and Continue", "edit-and-continue" },
                      { "Managed Return Values", "managed-return-values" }
                  }
@@ -104,25 +99,18 @@ namespace NETCatalog
                  "xamarin",
                  new Dictionary<string, string>
                  {
-                     { "Native Mobile", "native-mobile" }, // needs image!
-                     { "Xamarin Forms", "xamarin-forms" }, // needs image!
-                     { "Xamarin Studio", "xamarin-studio" }, // needs image!
-                     { "Xamarin", "xamarin" } // needs image!
+                     { "Native Mobile", "native-mobile" },
+                     { "Xamarin Forms", "xamarin-forms" },
+                     { "Xamarin Studio", "xamarin-studio" },
                  }
              },
              {
-                 "csharpvb",
+                 "csharpvbfsharp",
                  new Dictionary<string, string>
                  {
-                     { "C#", "chsarp" }, // needs image!
-                     {"Visual Basic", "vb" } // needs image!
-                 }
-             },
-             {
-                 "fsharp",
-                 new Dictionary<string, string>
-                 {
-                     { "Feature1", "feature1" } // needs image!
+                     { "C#", "csharp" },
+                     {"Visual Basic", "vb" },
+                     {"F#", "fsharp" }
                  }
              }
         };
