@@ -17,7 +17,7 @@ namespace NETCatalog
                 Tuple.Create("netcore", ".NET Core"),
                 Tuple.Create("netfx", ".NET Framework"),
                 Tuple.Create("aspnetcore", "ASP.NET Core"),
-                Tuple.Create("uwp", "Universal Windows Platform"),
+                Tuple.Create("uwp", "Universal Windows"),
                 Tuple.Create("vs", "Visual Studio"),
                 Tuple.Create("xamarin", "Xamarin"),
                 Tuple.Create("csharpvbfsharp", "C#, VB and F#")
@@ -35,7 +35,8 @@ namespace NETCatalog
 
                 var sl = new StackLayout
                 {
-                    Spacing = 0,
+                    Padding = new Thickness(20, 5, 5, 5),
+                    Spacing = 10,
                     VerticalOptions = LayoutOptions.FillAndExpand,
                     Children = { image, label }
                 };
