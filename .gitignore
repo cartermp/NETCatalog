@@ -1,5 +1,4 @@
-/bin
-/obj
-*.lock.json
-/Components
-/packages
+*.vs
+obj/
+bin/
+Resource.Designer.cs
