@@ -28,7 +28,7 @@ namespace NETCatalog.App.WinPhone
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            LoadApplication(new NETCatalog.App.App());
+            LoadApplication(new NETCatalogApp());
         }
 
         /// <summary>

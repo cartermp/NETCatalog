@@ -21,7 +21,7 @@ namespace NETCatalog.App.Windows
         {
             this.InitializeComponent();
 
-            LoadApplication(new NETCatalog.App.App());
+            LoadApplication(new NETCatalogApp());
         }
     }
 }

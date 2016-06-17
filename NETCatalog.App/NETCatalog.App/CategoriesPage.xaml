@@ -4,7 +4,9 @@
              x:Class="NETCatalog.CategoriesPage">
   <ContentPage.Content>
     <ScrollView Orientation="Vertical">
-      <Grid x:Name="CategoriesGrid">
+      <Grid x:Name="CategoriesGrid"
+            BackgroundColor="#162129"
+            Padding="0, 30, 0, 0">
         <Grid.RowDefinitions>
           <RowDefinition Height="*" />
         </Grid.RowDefinitions>

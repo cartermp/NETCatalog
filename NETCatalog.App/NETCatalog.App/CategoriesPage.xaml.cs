@@ -138,7 +138,7 @@ namespace NETCatalog
                     Spacing = 10,
                     Orientation = StackOrientation.Horizontal,
                     HorizontalOptions = LayoutOptions.FillAndExpand,
-                    Children = { image, label }
+                    Children = { label }
                 };
 
                 CategoriesGrid.Children.Add(sl, 0, row++);
@@ -151,7 +151,8 @@ namespace NETCatalog
             {
                 Text = niceConceptName,
                 VerticalOptions = LayoutOptions.Center,
-                FontSize = 20
+                FontSize = 20,
+                TextColor = Color.FromHex("#8b90ef")
             };
 
             var labelTapRecognizer = new TapGestureRecognizer();

@@ -24,6 +24,10 @@ namespace NETCatalog
             };
 
             Title = ".NET Catalog";
+            BackgroundColor = Color.FromHex("#35396b");
+
+            // The following will not overlay on top of the background color.
+            //BackgroundImage = "NETCatalog.App.backgroundLowerLeft.png";
 
             bool firstColumn = true;
             int row = 0;
@@ -38,7 +42,8 @@ namespace NETCatalog
                     Padding = new Thickness(20, 5, 5, 5),
                     Spacing = 10,
                     VerticalOptions = LayoutOptions.FillAndExpand,
-                    Children = { image, label }
+                    Children = { image, label },
+                    BackgroundColor = Color.Transparent
                 };
 
                 TopicsGrid.Children.Add(sl, firstColumn ? 0 : 1, row);
@@ -58,7 +63,8 @@ namespace NETCatalog
             {
                 Text = categoryTitle,
                 HorizontalOptions = LayoutOptions.Center,
-                FontSize = 15
+                FontSize = 15,
+                BackgroundColor = Color.Transparent
             };
 
             var labelTapRecognizer = new TapGestureRecognizer();
@@ -75,6 +81,7 @@ namespace NETCatalog
             {
                 Aspect = Aspect.AspectFit,
                 Source = ImageSource.FromResource($"NETCatalog.App.{category}.{category}.png"),
+                BackgroundColor = Color.Transparent
             };
 
             var imageTapRecognizer = new TapGestureRecognizer();

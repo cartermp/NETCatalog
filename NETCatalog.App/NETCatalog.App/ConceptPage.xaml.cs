@@ -29,11 +29,19 @@ namespace NETCatalog
         {
             var markdown = await _client.GetStringAsync($"{_baseUrl}/{category}/{concept}");
 
-            var html = new HtmlWebViewSource();
+            var htmlSource = new HtmlWebViewSource();
 
-            html.Html = CommonMarkConverter.Convert(markdown);
+            var css = @"
+            <style>
+                body { background-color: #162129; font-family: 'Segoe UI, sans-serif'; color: #fff; }
+                h1 { color: #8b90ef; font-family: 'Segoe UI', sans-serif; font-weight: 300; }
+                a { color: #949AFF; font-weight: bold; text-decoration: none; }
+            </style>
+            ";
 
-            MarkdownWebView.Source = html;
+            htmlSource.Html = $"<html><head>{css}</head><body>{CommonMarkConverter.Convert(markdown)}</body></html>";
+
+            MarkdownWebView.Source = htmlSource;
         }
     }
 }

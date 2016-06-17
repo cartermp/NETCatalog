@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NETCatalog.TopicsPage">
   <ContentPage.Content>
-    <ScrollView Orientation="Vertical">
-      <Grid x:Name="TopicsGrid">
+    <ScrollView x:Name="ScrollView" Orientation="Vertical" BackgroundColor="Transparent">
+      <Grid x:Name="TopicsGrid"
+            Padding="0, 30, 0, 0"
+            BackgroundColor="Transparent">
         <Grid.RowDefinitions>
           <RowDefinition Height="*" />
         </Grid.RowDefinitions>

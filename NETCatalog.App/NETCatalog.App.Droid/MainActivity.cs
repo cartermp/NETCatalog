@@ -9,9 +9,9 @@ using Android.OS;
 
 namespace NETCatalog.Droid
 {
-    [Activity(Theme = "@android:style/Theme.Material.Light",
+    [Activity(Theme = "@android:style/Theme.Material",
               Label = ".NET Catalog",
-              Icon = "@drawable/icon",
+              Icon = "@drawable/platform",
               MainLauncher = true,
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
